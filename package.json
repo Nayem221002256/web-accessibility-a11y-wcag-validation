@@ -4,7 +4,7 @@
   "private": true,
   "description": "CSE assignment: Web Accessibility (a11y) Automation & WCAG Compliance Validation using Cypress, axe-core and Pa11y.",
   "scripts": {
-    "serve": "node scripts/server.js",
+    "serve": "npx http-server . -p 4173 -a 0.0.0.0",
     "cypress:open": "cypress open",
     "test": "cypress run --browser electron",
     "test:chrome": "cypress run --browser chrome",
@@ -15,6 +15,7 @@
     "axe-core": "^4.13.0",
     "cypress": "^15.21.0",
     "cypress-axe": "^1.7.0",
-    "pa11y": "^9.1.1"
+    "pa11y": "^9.1.1",
+    "http-server": "^14.1.1"
   }
 }
