@@ -1,7 +1,8 @@
+import 'cypress-axe'
+
 describe('Web Accessibility Tests', () => {
   it('should load the demo page', () => {
     cy.visit('http://127.0.0.1:4173')
-
     cy.get('body').should('be.visible')
   })
 
@@ -9,7 +10,6 @@ describe('Web Accessibility Tests', () => {
     cy.visit('http://127.0.0.1:4173')
 
     cy.injectAxe()
-
     cy.checkA11y()
   })
 })
