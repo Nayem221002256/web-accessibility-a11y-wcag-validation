@@ -23,9 +23,10 @@ jobs:
         run: npm install
 
       - name: Start demo server
-        run: |
-          npm run serve > server.log 2>&1 &
-          sleep 5
+  run: |
+    npm run serve -- --host 0.0.0.0 > server.log 2>&1 &
+    sleep 10
+    cat server.log
 
       - name: Run Cypress accessibility tests
         run: npm test
