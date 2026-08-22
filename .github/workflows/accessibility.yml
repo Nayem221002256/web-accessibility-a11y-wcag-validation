@@ -17,16 +17,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-         
 
       - name: Install dependencies
         run: npm install
 
       - name: Start demo server
-  run: |
-    npm run serve -- --host 0.0.0.0 > server.log 2>&1 &
-    sleep 10
-    cat server.log
+        run: |
+          npm run serve -- --host 0.0.0.0 > server.log 2>&1 &
+          sleep 10
+          cat server.log
+          curl --retry 10 --retry-delay 2 --fail http://127.0.0.1:4173
 
       - name: Run Cypress accessibility tests
         run: npm test
