@@ -4,7 +4,7 @@ const fs = require('fs');
 async function runPa11y() {
   const url = 'http://127.0.0.1:4173';
 
-  console.log(`Running Pa11y accessibility audit on ${url}`);
+  console.log(`Running Pa11y audit on ${url}`);
 
   try {
     const results = await pa11y(url, {
@@ -20,7 +20,9 @@ async function runPa11y() {
       JSON.stringify(results, null, 2)
     );
 
-    console.log(`Pa11y found ${results.issues.length} accessibility issues.`);
+    console.log(
+      `Pa11y found ${results.issues.length} accessibility issues.`
+    );
 
     results.issues.forEach((issue, index) => {
       console.log(
