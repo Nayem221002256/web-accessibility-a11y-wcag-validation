@@ -1,0 +1,20 @@
+{
+  "name": "web-accessibility-a11y-wcag-validation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CSE assignment: Web Accessibility (a11y) Automation & WCAG Compliance Validation using Cypress, axe-core and Pa11y.",
+  "scripts": {
+    "serve": "node scripts/server.js",
+    "cypress:open": "cypress open",
+    "test": "cypress run --browser electron",
+    "test:chrome": "cypress run --browser chrome",
+    "pa11y": "node scripts/run-pa11y.js",
+    "accessibility": "npm run test && npm run pa11y"
+  },
+  "devDependencies": {
+    "axe-core": "^4.13.0",
+    "cypress": "^15.21.0",
+    "cypress-axe": "^1.7.0",
+    "pa11y": "^9.1.1"
+  }
+}

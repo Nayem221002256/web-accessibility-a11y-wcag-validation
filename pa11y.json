@@ -1,0 +1,7 @@
+{
+  "standard": "WCAG2AA",
+  "timeout": 60000,
+  "wait": 500,
+  "runner": ["axe", "htmlcs"],
+  "includeWarnings": true
+}
