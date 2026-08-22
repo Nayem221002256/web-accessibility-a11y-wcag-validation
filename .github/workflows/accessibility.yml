@@ -25,7 +25,7 @@ jobs:
       - name: Start demo server
         run: |
           npm run serve > server.log 2>&1 &
-          npx wait-on http://localhost:4173
+          sleep 5
 
       - name: Run Cypress accessibility tests
         run: npm test
